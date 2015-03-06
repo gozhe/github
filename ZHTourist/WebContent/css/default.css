@@ -1,0 +1,42 @@
+html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow: hidden;}
+table,td{height: 100%;}
+/*top*/
+#top{width: 100%;height: 26px;background: rgb(10,27,44)}
+#top_left{margin: 3px;padding: 5px;font-size: 11px;float: left;}
+#top_right{margin: 3px;padding: 5px;font-size: 11px;float: right;}
+a,a.link,a.visited{color: rgb(230,230,230);text-decoration: none;padding-left: 8px;}
+a:hover{color:rgb(200,200,200);}
+#current{color: white;}
+#login{color:#99cccc;}
+/*banner*/
+#banner{width:100%;height: 70px;background: rgb(255,255,255)}
+#logo{width:330px;}
+#querydiv{width:600px;height: 70px;}
+#logo,#querydiv{float: left;line-height: 70px;text-align: center;}
+#img_logo{width:300px;height: 70px;margin-left: 2px;}
+#queryinput,#querysel,#querybtn,#queryimg{float: left;margin-top: 18px;}
+#querysel{width:55px;height:30px;background: rgb(255,255,250)}
+#queryinput{width:300px;height: 30px;background: rgb(255,255,255);margin-left:2px;border-width: 0.15em;}
+#querybtn{width:80px;height:30px;background: rgb(30,103,250);margin-left:2px;color:white;font-size: 13px;cursor: pointer;}
+/* #queryimg{width:76px;height: 26px;margin-left: 6px;margin-top: 22px;} */
+/*content*/
+#content{width: 100%;height: 100%;background: rgb(255,255,255);}
+#left{width:300px;height: 100%; background: rgb(251,251,251);}
+#menu{width: 100%;height: 24px;}
+.menuA,.menuB{height: 100%;float: left;text-align: center;line-height: 24px;cursor:pointer;}
+.menuA{width:140px; background: rgb(13,37,89);}
+.menuB{width:160px; background: rgb(23,51,114);}
+.menutitle{font-size: 11px;color: white;margin-left: 3px;}
+.menuA:hover{background: green;}
+.menuB:hover{background: green;}
+#container{width: 100%;height: 100%;overflow: hidden;}
+
+#center{height: 100%; width: 100%; background: rgb(255,255,240);}
+#mapcontainer{width:100%;height: 100%;}
+
+/*Clear*/
+.Clear{clear: both;}
+
+
+
+

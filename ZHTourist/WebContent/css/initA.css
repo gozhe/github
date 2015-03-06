@@ -1,0 +1,13 @@
+
+body{width: 100%;height: 100%;margin: 0px;padding: 0px;/*overflow: hidden;*/}
+#content{padding: 10px;padding-top: 18px;}
+table{width: 100%; border-collapse:separate;border-spacing: 10px; }
+tr{text-align: center;width: 100%;}
+img{cursor: pointer;width:40px;height: 40px; }
+img:hover{background: rgb(240,240,240);}
+.item{font-size: 11px;color: rgb(100,100,100);margin-top: 5px;cursor:pointer;}
+#ad{width: 100%;text-align: center;}
+img.ad1{width: 90%;height: 130px;margin-top: 5px;}
+img.ad2{width: 90%;height: 110px;margin-top: 5px;margin-bottom: 25px;}
+
+.line_01{margin-left:auto;margin-right: auto; width: 200px; height: 1px; border-top: 1px solid #ddd;}

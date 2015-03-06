@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-type" content="charset=UTF-8">
+    <title>查询列表</title>
+    <link rel="stylesheet" type="text/css" href="css/initA-1.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqpagination.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jqpagination.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            type:"Get",
+            url:"data/jingdian.json",
+            dataType:"json",
+            success:function(data){
+            	//分页
+            	showlist(1,data);
+            	
+            	$('.pagination').jqPagination({
+		        	link_string : '/?page={page_number}',
+		            current_page: 1, //设置当前页 默认为1
+		            max_page : Math.ceil(data.length/4),//每页4项
+		            page_string : '当前第{current_page}页,共{max_page}页',
+		            paged : function(page) {
+		            	 //回发事件。。
+		            	showlist(page,data);
+		            }
+		        });
+            }
+        });
+        
+        function showlist(page,data){
+       	 	var html='';
+            html+='<ol>';
+            var startIndex= 4*page-3;//1,5,9,13,...
+            //if endIndex<total
+            var endIndex = 4*page;//4,8,12,16,...
+            if(4*page>data.length){
+           	 endIndex = data.length;
+            }
+            for(var i=startIndex;i<=endIndex;i++){
+            	var obj = data[i-1];
+            	html+='<li><div class="bg">';
+            	html+='<div id="content-1"><img class="img" src="img/gongjiao.png"></div>';
+            	html+='<div id="content-2"><table><tr><td><a href="">'+obj.name+'</a><a href="">详情》</a></td></tr>';
+            	html+='<tr><td>地址：'+obj.address+'</td></tr>';
+            	html+='<tr><td>电话：'+obj.tel+'</td></tr>';
+            	html+='<tr><td>标签：'+obj.level+' '+obj.type+'</td></tr>';
+            	html+='</table></div></div></li>';
+            }
+            html+='</ol>';
+            $('.listview').html(html);
+        }
+    </script></head>
+<body>
+    <div id="content"> 
+        <div class="l-result">
+            <div class="listview">
+            </div>
+            <div class="pagination">  
+            	<a href="#" class="first" data-action="first">首页</a>
+			    <a href="#" class="previous" data-action="previous">上一页</a>
+			    <input type="text" readonly="readonly" data-max-page="40" />
+			    <a href="#" class="next" data-action="next">下一页</a>
+			    <a href="#" class="last" data-action="last">尾页</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

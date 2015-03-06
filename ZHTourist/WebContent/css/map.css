@@ -1,0 +1,3 @@
+body{width: 100%;height: 100%;margin: 0px;padding: 0px;}
+#mapBox{z-index:1;width:100%;height:25px;}
+#mapDiv{z-index:0;width: 100%;height: 100%;}

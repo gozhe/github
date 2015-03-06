@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <title>旅游地图</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css"></head>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/de.js"></script>
+<body>
+    <div id="top">
+        <div id="top_left">
+            <a id="current" href="javascript:void();">网页地图</a>
+            <a href="javascript:void();">手机地图</a>
+            <a href="javascript:void();">庄河市政府</a>
+            <a href="javascript:void();">庄河市旅游局</a>
+            <a href="javascript:void();">冰峪沟风景区</a>
+        </div>
+        <div id="top_right">
+            <a id="login" href="javascript:void();">登录</a>
+            <a href="javascript:void();">微博</a>
+            <a href="javascript:void();">反馈信息</a>
+            <a href="javascript:void();">关于我们</a>
+        </div>
+    </div>
+    <div class="Clear"></div>
+    <div id="banner">
+        <div id="logo">
+            <img id="img_logo" src="img/logo2.png"></div>
+        <div id="querydiv">
+        	<select id="querysel" name="select" >
+				<option value="标签">标签</option>
+				<option value="景点">景点</option>
+				<option value="酒店">酒店</option>
+				<option value="餐饮">餐饮</option>
+			</select>
+            <input type="text" id="queryinput" name="queryme"/>
+            <input type="button" id="querybtn" name="querybtn" value="搜索一下"/>
+            <!-- <img id="queryimg" src="img/querybtn.png"> --></div>
+    </div>
+    <div id="content">
+        <!--百分比和固定宽度的混合布局-->
+        <table>
+            <tr>
+                <td width="320px">
+                    <div id="left">
+                        <div id="menu">
+                            <div class="menuA" onclick="menuA_Sel();">
+                                <img src="img/tag.png">
+                                <span class="menutitle">首页</span>
+                            </div>
+                            <div class="menuB" onclick="menuB_Sel();">
+                                <img src="img/tag.png">
+                                <span class="menutitle">景区专题</span>
+                            </div>
+                        </div>
+                        <div>
+                            <iframe id="container" frameborder="0" src="initA.html"></iframe>
+                        </div>
+                    </div>
+                </td>
+                <td width="100%">
+                    <div id="center">
+                        <iframe id="mapcontainer" frameborder="0" src="map.html"></iframe>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
